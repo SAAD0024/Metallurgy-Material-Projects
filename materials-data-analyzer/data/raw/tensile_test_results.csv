@@ -1,0 +1,17 @@
+specimen_id,material,test_condition,yield_strength_mpa,ultimate_tensile_strength_mpa,elongation_percent,hardness_hv
+AL-01,Aluminum 2024-T3,Room temperature,324,469,18.2,137
+AL-02,Aluminum 2024-T3,Room temperature,331,475,17.6,139
+AL-03,Aluminum 2024-T3,Room temperature,318,462,18.9,135
+AL-04,Aluminum 2024-T3,Room temperature,327,471,18.0,138
+SS-01,Stainless Steel 304,Room temperature,238,612,53.1,171
+SS-02,Stainless Steel 304,Room temperature,245,620,51.8,174
+SS-03,Stainless Steel 304,Room temperature,241,616,52.4,172
+SS-04,Stainless Steel 304,Room temperature,249,625,50.9,176
+MS-01,Mild Steel A36,Room temperature,259,451,26.4,132
+MS-02,Mild Steel A36,Room temperature,266,458,25.1,135
+MS-03,Mild Steel A36,Room temperature,254,447,27.2,130
+MS-04,Mild Steel A36,Room temperature,262,454,25.8,133
+TI-01,Titanium Grade 5,Room temperature,875,954,14.6,334
+TI-02,Titanium Grade 5,Room temperature,889,968,13.9,339
+TI-03,Titanium Grade 5,Room temperature,864,947,15.1,331
+TI-04,Titanium Grade 5,Room temperature,882,961,14.2,336
