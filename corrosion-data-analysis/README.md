@@ -96,6 +96,13 @@ The unseen Reference #253 test was much harder, with many observations from clas
 
 The underlying confusion-matrix outputs are retained in the notebook and can be reproduced from the NIST data.
 
+## Notebooks
+
+- `notebooks/01_data_exploration.ipynb` — original detailed working notebook containing the full exploratory workflow.
+- `notebooks/02_clean_analysis.ipynb` — **clean portfolio version** with the final analysis organized into a concise sequence.
+
+For a recruiter or reviewer, **`02_clean_analysis.ipynb` is the recommended starting point**.
+
 ## Project structure
 
 ```text
@@ -103,7 +110,8 @@ corrosion-data-analysis/
 ├── data/
 │   └── processed/          # generated outputs are created locally
 ├── notebooks/
-│   └── 01_data_exploration.ipynb
+│   ├── 01_data_exploration.ipynb
+│   └── 02_clean_analysis.ipynb
 ├── results/
 │   ├── figures/
 │   │   ├── model_comparison.svg
@@ -124,7 +132,7 @@ corrosion-data-analysis/
 1. Install Python 3 and the packages in `requirements.txt`.
 2. Download the NIST CORR-DATA CSV from the official source.
 3. Place the file at `data/CORR-DATA_Database.csv`.
-4. Open `notebooks/01_data_exploration.ipynb`.
+4. Open `notebooks/02_clean_analysis.ipynb`.
 5. Run the notebook from top to bottom.
 
 ## Limitations
