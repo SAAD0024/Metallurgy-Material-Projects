@@ -57,6 +57,8 @@ flowchart LR
 
 Adding temperature produced the largest improvement in the random stratified evaluation.
 
+![Model comparison](results/figures/model_comparison.svg)
+
 ### Validation strategy matters
 
 A random split can place observations from the same source distribution in both training and testing. To examine generalization more strictly, **Reference #253** was held out completely.
@@ -65,6 +67,8 @@ A random split can place observations from the same source distribution in both 
 |---|---:|---:|---:|---:|
 | Random stratified split | 13,316 | 3,330 | **78.35%** | **0.701** |
 | Unseen Reference #253 | 3,436 | 13,210 | 39.54% | 0.260 |
+
+![Validation strategy comparison](results/figures/validation_comparison.svg)
 
 Reference #253 represents **79.35% of all rated observations**. It also contains a substantially different category composition. In the strict test, **72.61%** of observations had a material category not seen during training and **39.28%** had an unseen environment.
 
@@ -80,6 +84,8 @@ For the three-feature-set Random Forest, the strongest reported features include
 4. specific chemical environment indicators
 5. material-family indicators
 
+![Top feature importances](results/figures/feature_importance_top15.svg)
+
 Feature importance is treated as a **model diagnostic**, not proof of physical causation.
 
 ## Confusion-matrix findings
@@ -87,6 +93,8 @@ Feature importance is treated as a **model diagnostic**, not proof of physical c
 On the random split, the Model 3 confusion matrix showed strong performance for class **A** and substantially better separation of **B/C/D** than the baseline models.
 
 The unseen Reference #253 test was much harder, with many observations from classes A, B, and D being assigned to other classes. This supports the conclusion that source/reference shift is a major challenge for this dataset.
+
+The underlying confusion-matrix outputs are retained in the notebook and can be reproduced from the NIST data.
 
 ## Project structure
 
@@ -97,6 +105,10 @@ corrosion-data-analysis/
 ├── notebooks/
 │   └── 01_data_exploration.ipynb
 ├── results/
+│   ├── figures/
+│   │   ├── model_comparison.svg
+│   │   ├── validation_comparison.svg
+│   │   └── feature_importance_top15.svg
 │   ├── model_comparison.csv
 │   ├── model3_feature_importance_top20.csv
 │   ├── validation_comparison.csv
