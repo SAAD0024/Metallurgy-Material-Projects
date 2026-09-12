@@ -1,0 +1,20 @@
+Feature,Importance
+concentration_mid,0.103215
+temperature_mid_c,0.080307
+temperature_missing,0.041961
+Environment_clean_Sulfuric Acid,0.023746
+concentration_missing,0.015069
+Material Family_clean_Austenitic,0.014517
+Environment_clean_Nitric Acid,0.011980
+Material Family_clean_Martensitic,0.011668
+Environment_clean_Phosphoric Acid,0.011481
+Environment_clean_Chromic Acid,0.011465
+Material_clean_303,0.011453
+Environment_clean_Bromine,0.009032
+Environment_clean_Lactic Acid,0.008648
+Environment_clean_Ammonium Chloride,0.008069
+Environment_clean_Citric Acid,0.007659
+Environment_clean_Aluminum Sulfate,0.007562
+Environment_clean_Acetic Acid,0.007533
+Material Family_clean_Ferritic,0.007451
+Environment_clean_Sodium Hypochlorite,0.007246

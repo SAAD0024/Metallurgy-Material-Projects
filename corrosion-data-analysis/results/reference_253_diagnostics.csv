@@ -1,0 +1,11 @@
+Metric,Value
+Reference #253 share of rated data,79.35%
+Reference #253 unique materials,25
+Other references unique materials,156
+Reference #253 unique environments,219
+Other references unique environments,142
+Reference #253 material categories unseen in training,18 of 25 (72%)
+Reference #253 environment categories unseen in training,128 of 219 (58%)
+Reference #253 observations with unseen material,9592 (72.61%)
+Reference #253 observations with unseen environment,5189 (39.28%)
+Reference #253 observations with both unseen,3756 (28.43%)

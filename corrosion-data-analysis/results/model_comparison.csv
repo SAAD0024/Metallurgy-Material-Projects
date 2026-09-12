@@ -1,0 +1,4 @@
+Model,Accuracy,Macro F1,Weighted F1
+Baseline,0.6384,0.541247,0.658373
+Baseline + Concentration,0.6604,0.542587,0.672449
+Baseline + Concentration + Temperature,0.7835,0.701042,0.788676
