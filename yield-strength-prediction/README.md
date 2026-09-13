@@ -4,7 +4,7 @@ A materials-focused machine-learning project for predicting steel yield strength
 
 ## Project Status
 
-Core modeling, validation, error analysis, and interpretability workflow completed.
+Core modeling, validation, error analysis, and interpretability workflow completed. A cleaned, end-to-end reproducible notebook is included in `notebooks/`.
 
 ## Dataset
 
@@ -14,6 +14,8 @@ Core modeling, validation, error analysis, and interpretability workflow complet
 - Core model: 28 features
 - Temperature-augmented model: 32 features
 - Reported 20% evaluation split: 1,554 training / 389 testing samples
+
+The raw source spreadsheet is intentionally not committed to the repository.
 
 ## Methodology
 
@@ -56,7 +58,7 @@ Temperature augmentation improved the same reported holdout comparison by 2.21 M
 | RMSE | **139.61 MPa** | 3.61 MPa |
 | R² | **0.7878** | 0.0181 |
 
-The leakage-free pipeline performs median imputation inside the cross-validation pipeline rather than calculating imputation statistics from the full dataset.
+The leakage-free pipeline performs median imputation inside each cross-validation training fold rather than calculating imputation statistics from the full dataset.
 
 ## Important Features
 
@@ -75,6 +77,8 @@ The strongest final Random Forest features included:
 
 Permutation importance similarly highlighted tempering state, Fe, C, P, quenching state, and aging state.
 
+These are predictive associations, not causal metallurgical conclusions.
+
 ## Key Finding
 
 Heat-treatment state and alloy chemistry carry most of the predictive signal in this dataset. Explicit temperature features provide an additional but modest improvement. Prediction error becomes less consistent for sparsely represented high-strength materials, making data coverage an important limitation.
@@ -83,6 +87,11 @@ Heat-treatment state and alloy chemistry carry most of the predictive signal in 
 
 The original analysis performed hyperparameter search on the full modeling dataset before the reported 20% holdout evaluation. Consequently, the holdout should **not** be described as a completely untouched final test set. The leakage-free 5-fold cross-validation is the primary robustness estimate, while the holdout is best treated as a comparative evaluation.
 
+## Notebook
+
+- `notebooks/reproducible_yield_strength_prediction.ipynb` — cleaned end-to-end workflow
+- `notebooks/final_results.ipynb` — compact results-focused notebook
+
 ## Repository Structure
 
 ```text
@@ -90,6 +99,7 @@ yield-strength-prediction/
 ├── README.md
 ├── requirements.txt
 ├── notebooks/
+│   ├── reproducible_yield_strength_prediction.ipynb
 │   └── final_results.ipynb
 ├── data/
 │   └── README.md
