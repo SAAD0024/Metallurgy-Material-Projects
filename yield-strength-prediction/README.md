@@ -50,6 +50,26 @@ The raw source spreadsheet is intentionally not committed to the repository.
 
 Temperature augmentation improved the same reported holdout comparison by 2.21 MPa MAE (2.42%), 0.91 MPa RMSE (0.65%), and 0.0026 R² (0.33%).
 
+## Visual Results
+
+The following figures summarize the comparative model evaluation and leakage-free cross-validation results.
+
+### Model Error Comparison
+
+![Model Error Comparison](results/model_error_comparison.png)
+
+### R² Comparison
+
+![R2 Comparison](results/r2_comparison.png)
+
+### 5-Fold Cross-Validation Error
+
+![5-Fold CV Error](results/cv_error_by_fold.png)
+
+### 5-Fold Cross-Validation R²
+
+![5-Fold CV R2](results/cv_r2_by_fold.png)
+
 ## Leakage-Free 5-Fold Cross-Validation
 
 | Metric | Mean | Std. Dev. |
@@ -104,7 +124,11 @@ yield-strength-prediction/
 ├── data/
 │   └── README.md
 └── results/
-    └── README.md
+    ├── README.md
+    ├── model_error_comparison.png
+    ├── r2_comparison.png
+    ├── cv_error_by_fold.png
+    └── cv_r2_by_fold.png
 ```
 
 ## Technologies
