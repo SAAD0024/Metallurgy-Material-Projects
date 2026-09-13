@@ -103,27 +103,6 @@ These are predictive associations, not causal metallurgical conclusions.
 
 Heat-treatment state and alloy chemistry carry most of the predictive signal in this dataset. Explicit temperature features provide an additional but modest improvement. Prediction error becomes less consistent for sparsely represented high-strength materials, making data coverage an important limitation.
 
-## Visual Results
-
-### Model Performance
-
-![Model Error Comparison](results/model_error_comparison.png)
-
-### Prediction Quality
-
-![Actual vs Predicted](results/actual_vs_predicted.png)
-
-### Error Analysis
-
-![Residual Analysis](results/residual_analysis.png)
-
-### Feature Importance
-
-![Random Forest Feature Importance](results/rf_feature_importance.png)
-
-### Cross-Validation
-
-![5-Fold Cross-Validation R²](results/cv_r2_by_fold.png)
 
 ## Validation Note
 
