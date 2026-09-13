@@ -1,0 +1,14 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+.venv/
+venv/
+
+# Local/raw datasets
+/data/raw/
+*.xlsx
+*.xls
+
+# Generated outputs
+results/generated/
