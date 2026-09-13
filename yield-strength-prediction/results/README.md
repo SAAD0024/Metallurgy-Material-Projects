@@ -20,3 +20,25 @@
 - R² improvement: **0.0026 (0.33%)**
 
 The final analysis also includes actual-vs-predicted plots, residual analysis, strength-range error analysis, Random Forest feature importance, and permutation importance.
+
+## Visual summary
+
+### 5-Fold Cross-Validation Metrics
+
+![5-Fold Cross-Validation R²](./5-fold-cross-validation-r2.png)
+
+*R² values across the five folds show stable performance with a modest dip in fold 3 and the strongest result in fold 5.*
+
+![5-Fold Cross-Validation Error](./5-fold-cross-validation-error.png)
+
+*MAE and RMSE remain consistent across folds, indicating reliable generalization.*
+
+### Model Comparison
+
+![R² Comparison](./r2-comparison.png)
+
+*The temperature-augmented model shows a slight improvement in R² over the core Random Forest.*
+
+![Model Error Comparison](./model-error-comparison.png)
+
+*The temperature-augmented model reduces MAE and RMSE modestly compared with the core Random Forest.*
