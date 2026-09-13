@@ -1,6 +1,8 @@
-# Materials Data Analyzer
+# Machine Learning-Based Yield Strength Prediction of Steels
 
-A beginner-friendly Python project for exploring materials engineering tensile-test data.
+A materials engineering project combining steel chemistry, processing
+conditions, and machine learning to predict yield strength, with
+cross-validation, residual analysis, and feature-importance analysis.
 
 ## Important data notice
 
