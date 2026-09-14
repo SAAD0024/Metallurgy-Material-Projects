@@ -1,0 +1,9 @@
+Model,Random MAE (HRC),Random RMSE (HRC),Random R²,Grouped MAE (HRC),Grouped RMSE (HRC),Grouped R²,Grouped MAE Rank
+Gradient Boosting,2.572,3.590,0.861,2.364,3.605,0.897,1
+Tuned Gradient Boosting,2.468,3.408,0.875,2.403,3.615,0.896,2
+C — Temperature + log10(Time) + Interaction,1.977,2.291,0.944,2.404,2.990,0.929,3
+Random Forest,2.318,3.018,0.902,2.419,3.754,0.888,4
+Tuned Random Forest,2.336,3.028,0.901,2.423,3.754,0.888,5
+B — Temperature + log10(Time),2.363,2.809,0.915,2.889,3.978,0.875,6
+Decision Tree,2.664,3.665,0.856,2.914,4.275,0.855,7
+A — Temperature + Raw Time,2.896,3.965,0.831,3.584,4.721,0.823,8
