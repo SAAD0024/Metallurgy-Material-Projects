@@ -19,8 +19,9 @@ The final selected model is an interaction linear regression using:
 - Tempering temperatures: 100–700 °C
 - Tempering times: 10–86,400 s
 - Target: Final hardness after tempering (HRC)
+- Primary subset: Penha (2010)
 
-The original raw source data are not committed to the public repository unless licensing and redistribution requirements permit it.
+The model-ready processed subset is provided in `data/processed/4340_Penha2010_processed.csv`. The broader Raiipa dataset is documented in `data/README.md`; the full raw source file is not duplicated in this repository.
 
 ## Methodology
 
@@ -54,7 +55,7 @@ Grouped temperature cross-validation was used as the primary robustness evaluati
 | Decision Tree | 2.914 | 4.275 | 0.855 |
 | Temperature + Raw Time | 3.584 | 4.721 | 0.823 |
 
-Model C achieved the highest grouped-CV R² and the lowest grouped-CV RMSE among the evaluated models, while maintaining a highly interpretable analytical form.
+Model C achieved the highest grouped-CV R² and the lowest grouped-CV RMSE among the evaluated models, while maintaining a highly interpretable analytical form. Gradient Boosting achieved a slightly lower grouped-CV MAE, so Model C is selected for the project because of the combined accuracy, interpretability, and interaction insight rather than because it is best on every metric.
 
 ## Final model
 
@@ -102,15 +103,25 @@ This indicates that the model captures the overall tempering trend well but has 
 
 ## Figures
 
-The project includes:
+The project includes six final figures:
 
 1. Hardness versus tempering temperature
 2. Hardness versus log10(tempering time)
 3. Actual versus predicted hardness
 4. Residuals versus tempering temperature
 5. Model C interaction response
-6. Experimental data with model response
-7. Final model comparison using grouped-CV MAE
+6. Model comparison using pooled grouped-CV MAE
+
+## Results
+
+Final result tables are provided under `data/results/`:
+
+- `final_model_comparison.csv`
+- `final_model_summary.csv`
+- `model_comparison.csv`
+- `model_C_grouped_CV_predictions.csv`
+- `model_C_residuals_by_temperature.csv`
+- `model_C_largest_errors.csv`
 
 ## Project structure
 
@@ -120,9 +131,17 @@ heat-treatment-ml/
 ├── requirements.txt
 ├── .gitignore
 ├── data/
-│   ├── raw/
+│   ├── README.md
 │   ├── processed/
+│   │   └── 4340_Penha2010_processed.csv
+│   ├── raw/
 │   └── results/
+│       ├── final_model_comparison.csv
+│       ├── final_model_summary.csv
+│       ├── model_C_grouped_CV_predictions.csv
+│       ├── model_C_largest_errors.csv
+│       ├── model_C_residuals_by_temperature.csv
+│       └── model_comparison.csv
 ├── figures/
 ├── notebooks/
 │   └── 4340_heat_treatment_ML.ipynb
@@ -137,11 +156,11 @@ Python · NumPy · pandas · Matplotlib · scikit-learn · Jupyter Notebook
 
 1. Create a Python virtual environment.
 2. Install dependencies from `requirements.txt`.
-3. Place the permitted source dataset in the appropriate local data directory.
+3. Place the permitted source dataset in the appropriate local data directory if reproducing the full preprocessing workflow.
 4. Open `notebooks/4340_heat_treatment_ML.ipynb`.
 5. Run the notebook from top to bottom.
 
-Generated result tables are stored in `data/results/`, and publication/recruiter-facing figures are stored in `figures/`.
+Generated result tables are stored in `data/results/`, and recruiter-facing figures are stored in `figures/`.
 
 ## Status
 
