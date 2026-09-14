@@ -1,0 +1,2 @@
+Model,Features,Intercept,Temperature coefficient,log10(Time) coefficient,Interaction coefficient,Random Test MAE (HRC),Random Test RMSE (HRC),Random Test R²,Grouped CV MAE (HRC),Grouped CV RMSE (HRC),Grouped CV R²
+Model C — Interaction Linear Regression,Temperature + log10(Time) + Temperature × log10(Time),62.109275,-0.021445,0.041507,-0.009068,1.976644,2.290535,0.943578,2.404016,2.990258,0.929097
